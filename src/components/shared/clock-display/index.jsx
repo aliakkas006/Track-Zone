@@ -1,8 +1,10 @@
 import { format } from 'date-fns';
+import classes from './index.module.css';
+
 const ClockDisplay = ({ date, timezone, offset, title }) => {
   const offsetHr = offset / 60;
   return (
-    <div>
+    <div className={classes.card}>
       <h1>Title: {title} </h1>
       <h3> {format(date, "dd-MM-yyyy hh:mm:ss aaaaa'm'")} </h3>
       <p>

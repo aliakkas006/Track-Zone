@@ -1,7 +1,24 @@
-const ClockList = () => {
+import ClockListItem from './clock-list-item';
+
+const ClockList = ({ clocks, updateClock, deleteClock, localClock }) => {
   return (
     <div>
-      <h1>Clock list</h1>
+      <h3>Other clocks</h3>
+      <hr />
+
+      {clocks.length === 0 ? (
+        <p>Theres is no clock.Please create one!</p>
+      ) : (
+        clocks.map((clock) => (
+          <ClockListItem
+            key={clock.id}
+            clock={clock}
+            localClock={localClock}
+            updateClock={updateClock}
+            deleteClock={deleteClock}
+          />
+        ))
+      )}
     </div>
   );
 };
