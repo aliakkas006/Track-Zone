@@ -13,7 +13,7 @@ const LOCAL_CLOCK_INIT = {
 function App() {
   const [localClock, setLocalClock] = useState({ ...LOCAL_CLOCK_INIT });
   const [clocks, setClocks] = useState([]);
-
+  
   const updateLocalClock = (data) => {
     setLocalClock({
       ...LocalClock,

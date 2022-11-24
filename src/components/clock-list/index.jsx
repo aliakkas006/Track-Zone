@@ -1,9 +1,9 @@
 import ClockListItem from './clock-list-item';
 
-const ClockList = ({ clocks, updateClock, deleteClock, localClock }) => {
+const ClockList = ({ localClock, clocks, updateClock, deleteClock }) => {
   return (
     <div>
-      <h3>Other clocks</h3>
+      <h3>Other Clocks</h3>
       <hr />
 
       {clocks.length === 0 ? (

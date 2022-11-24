@@ -3,6 +3,7 @@ import classes from './index.module.css';
 
 const ClockDisplay = ({ date, timezone, offset, title }) => {
   const offsetHr = offset / 60;
+  
   return (
     <div className={classes.card}>
       <h1>Title: {title} </h1>
